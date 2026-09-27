@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'authentication.dart';
-import 'home_page/home.dart';
-import 'main.dart';
+import 'package:groupies/auth/authentication.dart';
+import 'package:groupies/home/home_page.dart';
+import 'package:groupies/main.dart';
 
 
 

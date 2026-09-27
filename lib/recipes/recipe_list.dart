@@ -1,4 +1,4 @@
-import 'package:groupies/recipes/Recipe.dart';
+import 'package:groupies/recipes/recipe.dart';
 
 class RecipeList {
   final List<Recipe> recipes;

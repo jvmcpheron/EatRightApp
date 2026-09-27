@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:groupies/habit_tracker/q_habit_presenter.dart';
 import 'package:groupies/habit_tracker/quantity_habit.dart';
-import 'habit.dart';
-import 'habit_card.dart';
+import 'package:groupies/habit_tracker/habit.dart';
+import 'package:groupies/habit_tracker/habit_card.dart';
 
 
 class QuantityHabitCard extends HabitCard {

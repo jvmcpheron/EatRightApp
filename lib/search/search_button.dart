@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:groupies/recipes/RecipePresenter.dart';
-import 'SimpleSearchDelegate.dart';
+import 'package:groupies/recipes/recipe_presenter.dart';
+import 'package:groupies/search/simple_search_delegate.dart';
 
 class SearchButton extends StatelessWidget {
   const SearchButton({super.key});

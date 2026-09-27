@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:groupies/recipes/RecipeManager.dart';
-import 'package:groupies/recipes/Recipe.dart';
-import '../UUID.dart'; // Assuming this is where UserSingleton is defined
+import 'package:groupies/recipes/recipe_manager.dart';
+import 'package:groupies/recipes/recipe.dart';
+import 'package:groupies/core/uuid.dart'; // Assuming this is where UserSingleton is defined
 
 class RecipePresenter {
   final RecipeManager _recipeManager = RecipeManager();

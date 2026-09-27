@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'pancake.dart';
-import 'recipes/RecipeCard.dart';
-import 'recipes/RecipePresenter.dart';
-import 'recipes/Recipe.dart';
-import 'BottomBar.dart';
+import 'package:groupies/navigation/pancake.dart';
+import 'package:groupies/recipes/recipe_card.dart';
+import 'package:groupies/recipes/recipe_presenter.dart';
+import 'package:groupies/recipes/recipe.dart';
+import 'package:groupies/navigation/bottom_bar.dart';
 
 class FavoritesPage extends StatefulWidget {
   const FavoritesPage({super.key});

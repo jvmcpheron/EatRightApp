@@ -12,3 +12,6 @@ Track your eating habits!
 Search and filter recipes from API!
 Receive notifications to drink water! 
 
+## Notes
+- This project is no longer in use, so the Firebase functionality is no longer available
+

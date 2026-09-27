@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'waterClockFuncs.dart';
+import 'package:groupies/water_clock/water_clock_funcs.dart';
 
 
 class NotificationPresenter {

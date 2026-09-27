@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'habit.dart';
+import 'package:groupies/habit_tracker/habit.dart';
 
 
 class HabitCard extends StatefulWidget {

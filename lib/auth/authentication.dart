@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'home_page/home.dart';
-import 'UUID.dart';
-import 'main.dart';
+import 'package:groupies/home/home_page.dart';
+import 'package:groupies/core/uuid.dart';
+import 'package:groupies/main.dart';
 
 class AuthenticationPage extends StatefulWidget {
   @override
@@ -41,7 +41,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
         context,
         MaterialPageRoute(builder: (context) => const HomePage()),
       );
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException {
       // Handle errors as before
     } catch (e) {
       // Handle unexpected errors

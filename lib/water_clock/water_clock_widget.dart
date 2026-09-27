@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:groupies/pancake.dart';
-import 'waterClockFuncs.dart';
-import 'waterClockPresenter.dart';
-import 'package:groupies/BottomBar.dart';
+import 'package:groupies/navigation/pancake.dart';
+import 'package:groupies/water_clock/water_clock_funcs.dart';
+import 'package:groupies/water_clock/water_clock_presenter.dart';
+import 'package:groupies/navigation/bottom_bar.dart';
 
 
 class Water_Clock extends StatelessWidget {

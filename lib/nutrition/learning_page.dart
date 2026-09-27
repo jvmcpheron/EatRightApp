@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import '../pancake.dart';
-import '../BottomBar.dart';
+import 'package:groupies/navigation/pancake.dart';
+import 'package:groupies/navigation/bottom_bar.dart';
 
 class LearningPage extends StatelessWidget {
   LearningPage({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:groupies/habit_tracker/yes_no_habit.dart';
 import 'package:groupies/habit_tracker/habit_list.dart';
-import '../UUID.dart';
+import 'package:groupies/core/uuid.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 

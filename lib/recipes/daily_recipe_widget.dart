@@ -1,35 +1,20 @@
 import 'package:flutter/material.dart';
-import 'pancake.dart';
-import 'recipes/RecipeCard.dart';
-import 'package:groupies/recipes/RecipePresenter.dart';
-import 'BottomBar.dart';
+import 'package:groupies/navigation/pancake.dart';
+import 'package:groupies/recipes/recipe_card.dart';
+import 'package:groupies/recipes/recipe_presenter.dart';
+import 'package:groupies/navigation/bottom_bar.dart';
+import 'package:groupies/recipes/recipe.dart';
+import 'package:groupies/recipes/daily_recipe_card.dart';
 
-class DailyRecipePage extends StatelessWidget {
-  const DailyRecipePage({super.key});
+class DailyRecipeWidget extends StatelessWidget {
+  const DailyRecipeWidget({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     final recipePresenter = RecipePresenter();
 
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.orange,
-        leading: const PancakeMenuButton(),
-        title: Row(
-          children: const [
-            Text(
-              'Daily Recipe',
-              style: TextStyle(color: Colors.white),
-            ),
-            SizedBox(width: 8),
-            Icon(
-              Icons.calendar_month,
-              color: Colors.white,
-            ),
-          ],
-        ),
-      ),
-      body: FutureBuilder<void>(
+    return FutureBuilder<void>(
 
         //use presenter to get daily recipe
         future: recipePresenter.getDailyRecipe(),
@@ -44,7 +29,7 @@ class DailyRecipePage extends StatelessWidget {
               return const Center(child: Text("No recipe found"));
             }
             return Center(
-              child: RecipeCard(
+              child: DailyRecipeCard(
                 id: recipe.getId,
                 title: recipe.getTitle,
                 imageUrl: recipe.getImageURL,
@@ -53,8 +38,6 @@ class DailyRecipePage extends StatelessWidget {
             );
           }
         },
-      ),
-      bottomNavigationBar: const WhiteBottomBar(),
     );
   }
 }

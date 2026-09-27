@@ -1,17 +1,15 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:groupies/Water_Clock/waterClockWidget.dart';
-import 'package:groupies/nutrition_learning/LearningPage.dart';
-import '../BottomBar.dart';
-import '../authentication.dart';
-import '../dailyRecipe.dart';
-import '../habit_tracker/weekly_tracker_page.dart';
-import '../pancake.dart';
-import '../favorites.dart';
-import '../recipes/RecipePresenter.dart';
-import '../recipes/dailyRecipeWidget.dart';
-import '../search_page/SimpleSearchDelegate.dart';
-import '../search_page/search_button.dart';
+import 'package:groupies/water_clock/water_clock_widget.dart';
+import 'package:groupies/nutrition/learning_page.dart';
+import 'package:groupies/navigation/bottom_bar.dart';
+import 'package:groupies/recipes/daily_recipe_page.dart';
+import 'package:groupies/habit_tracker/weekly_tracker_page.dart';
+import 'package:groupies/navigation/pancake.dart';
+import 'package:groupies/recipes/favorites_page.dart';
+import 'package:groupies/recipes/recipe_presenter.dart';
+import 'package:groupies/recipes/daily_recipe_widget.dart';
+import 'package:groupies/search/simple_search_delegate.dart';
+import 'package:groupies/search/search_button.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -43,48 +41,7 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.orange,
           leading: const PancakeMenuButton(),
           // Pancake menu on the top left corner
-          actions: [
-            const SearchButton(), // search button
-
-            IconButton(
-              icon: Icon(Icons.logout, color: Colors.white), // Logout icon
-              onPressed: () async {
-                bool? logoutconfirm = await showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog.adaptive(
-                        title: Text('Comfirm Logout'),
-                        content: Text('Are you sure you want to logout'),
-                        actions: [
-                          TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop(false);
-                              },
-                              child: Text('No'),
-                          ),
-                          TextButton(
-                              onPressed:(){
-                                Navigator.of(context).pop(true);
-                              },
-                              child: Text('Yes'),
-                            ),
-                          ],
-                        );
-                      },
-                    );
-
-                              if(logoutconfirm == true){
-                      // Log the user out
-                      await FirebaseAuth.instance.signOut();
-                  // Navigate to the AuthenticationPage
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => AuthenticationPage()),
-                  );
-                }
-              },
-            ),
-          ],
+          actions: const [SearchButton()],
           title: const Row(
             children: [
               Text(

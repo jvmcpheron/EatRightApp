@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'habit_tracker/weekly_tracker_page.dart';
-import 'home_page/home.dart';
-import 'favorites.dart';
+import 'package:groupies/habit_tracker/weekly_tracker_page.dart';
+import 'package:groupies/home/home_page.dart';
+import 'package:groupies/recipes/favorites_page.dart';
 
 class WhiteBottomBar extends StatelessWidget {
   const WhiteBottomBar({super.key});

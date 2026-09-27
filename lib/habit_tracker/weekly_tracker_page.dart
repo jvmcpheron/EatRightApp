@@ -6,11 +6,11 @@ import 'package:groupies/habit_tracker/quantity_habit.dart';
 import 'package:groupies/habit_tracker/yes_no_habit.dart';
 import 'package:groupies/habit_tracker/yn_habit_manager.dart';
 import 'package:groupies/habit_tracker/yn_habit_presenter.dart';
-import 'package:groupies/pancake.dart';
+import 'package:groupies/navigation/pancake.dart';
 import 'package:table_calendar/table_calendar.dart';
-import '../BottomBar.dart';
-import 'habit.dart';
-import 'habit_list_view.dart';
+import 'package:groupies/navigation/bottom_bar.dart';
+import 'package:groupies/habit_tracker/habit.dart';
+import 'package:groupies/habit_tracker/habit_list_view.dart';
 
 
 class WeeklyTrackerPage extends StatefulWidget {

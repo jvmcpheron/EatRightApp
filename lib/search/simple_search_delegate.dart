@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../recipes/RecipePresenter.dart';
-import '../recipes/RecipeCard.dart';
+import 'package:groupies/recipes/recipe_presenter.dart';
+import 'package:groupies/recipes/recipe_card.dart';
 
 class SimpleSearchDelegate extends SearchDelegate {
   final RecipePresenter recipePresenter;

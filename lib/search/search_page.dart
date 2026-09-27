@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../pancake.dart';
-import '../search_page/search_button.dart';
-import '../recipes/RecipePresenter.dart';
+import 'package:groupies/navigation/pancake.dart';
+import 'package:groupies/search/search_button.dart';
+import 'package:groupies/recipes/recipe_presenter.dart';
 
 class SearchPage extends StatelessWidget {
 

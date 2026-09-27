@@ -1,4 +1,4 @@
-import 'recipes/Recipe.dart';
+import 'package:groupies/recipes/recipe.dart';
 import 'dart:convert';
 
 class JSONParser {

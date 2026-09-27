@@ -1,7 +1,7 @@
 import 'package:groupies/habit_tracker/yes_no_habit.dart';
 import 'package:groupies/habit_tracker/quantity_habit.dart';
 
-import 'habit.dart';
+import 'package:groupies/habit_tracker/habit.dart';
 
 class HabitList {
   List<YesNoHabit> yesNoHabits;

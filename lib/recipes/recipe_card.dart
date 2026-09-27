@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
-import 'Recipe.dart';
-import 'RecipePresenter.dart';
-import 'RecipeManager.dart';
+import 'package:groupies/recipes/recipe.dart';
+import 'package:groupies/recipes/recipe_presenter.dart';
+import 'package:groupies/recipes/recipe_manager.dart';
+import 'package:groupies/recipes/recipe_image.dart';
 
 class RecipeCard extends StatefulWidget {
   final String id;
@@ -62,7 +63,8 @@ class _RecipeCardState extends State<RecipeCard> {
       isFavorite = !isFavorite;
     });
 
-    final recipe = Recipe(widget.id, widget.title, widget.imageUrl, widget.recipeDetails);
+    final recipe =
+        Recipe(widget.id, widget.title, widget.imageUrl, widget.recipeDetails);
     try {
       await recipeManager.updateFavoriteRecipe(recipe);
     } catch (e) {
@@ -89,16 +91,10 @@ class _RecipeCardState extends State<RecipeCard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.network(
-                widget.imageUrl,
+              RecipeImage(
+                imageUrl: widget.imageUrl,
                 width: double.infinity,
                 height: 150,
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) {
-                  return const Center(
-                    child: Icon(Icons.broken_image, size: 100, color: Colors.grey),
-                  );
-                },
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),
@@ -115,14 +111,17 @@ class _RecipeCardState extends State<RecipeCard> {
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
-                            overflow: TextOverflow.ellipsis, // Ensures long titles are truncated
+                            overflow: TextOverflow
+                                .ellipsis, // Ensures long titles are truncated
                           ),
                         ),
                         Row(
                           children: [
                             IconButton(
                               icon: Icon(
-                                isFavorite ? Icons.favorite : Icons.favorite_border,
+                                isFavorite
+                                    ? Icons.favorite
+                                    : Icons.favorite_border,
                               ),
                               color: Colors.redAccent,
                               onPressed: _toggleFavorite,
@@ -136,7 +135,6 @@ class _RecipeCardState extends State<RecipeCard> {
                         ),
                       ],
                     ),
-
                     const SizedBox(height: 8),
                     Text(
                       widget.recipeDetails,
@@ -175,16 +173,10 @@ class RecipeDetailsPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
-              imageUrl,
+            RecipeImage(
+              imageUrl: imageUrl,
               width: double.infinity,
               height: 250,
-              fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) {
-                return const Center(
-                  child: Icon(Icons.broken_image, size: 100, color: Colors.grey),
-                );
-              },
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -212,5 +204,3 @@ class RecipeDetailsPage extends StatelessWidget {
     );
   }
 }
-
-

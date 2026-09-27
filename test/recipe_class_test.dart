@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:groupies/recipes/Recipe.dart';
-import 'package:groupies/recipes/RecipeList.dart';
-import 'package:groupies/recipes/RecipeManager.dart';
+import 'package:groupies/recipes/recipe.dart';
+import 'package:groupies/recipes/recipe_list.dart';
+import 'package:groupies/recipes/recipe_manager.dart';
 
 void main() {
   group('Recipe Class Tests', () {

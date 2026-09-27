@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'habit_tracker/weekly_tracker_page.dart';
-import 'home_page/home.dart';
-import 'favorites.dart';
-import 'main.dart';
-import 'package:groupies/Water_Clock/waterClockWidget.dart';
-import 'dailyRecipe.dart';
-import 'nutrition_learning/LearningPage.dart';
+import 'package:groupies/habit_tracker/weekly_tracker_page.dart';
+import 'package:groupies/home/home_page.dart';
+import 'package:groupies/recipes/favorites_page.dart';
+import 'package:groupies/main.dart';
+import 'package:groupies/water_clock/water_clock_widget.dart';
+import 'package:groupies/recipes/daily_recipe_page.dart';
+import 'package:groupies/nutrition/learning_page.dart';
 
 class PancakeMenuButton extends StatelessWidget {
   const PancakeMenuButton({super.key});

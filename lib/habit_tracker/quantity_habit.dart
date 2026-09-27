@@ -1,4 +1,4 @@
-import 'habit.dart';
+import 'package:groupies/habit_tracker/habit.dart';
 
 class QuantityHabit extends Habit {
   double amount = -1;
